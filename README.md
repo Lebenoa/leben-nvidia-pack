@@ -22,13 +22,15 @@ Windows requires PowerShell 5.1 or later; its downloader and ZIP extraction comm
 
 ## Usage
 
-Open a terminal in the extracted folder containing `pack.toml` and the installer scripts.
+**Windows:** double-click `install.cmd` in the extracted folder. It runs `install.ps1` and keeps the window open so you can read the result or any errors. No administrator privileges are required.
 
-Windows PowerShell:
+Alternatively, open PowerShell in the extracted folder and run:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 ```
+
+**Linux / macOS:** open a terminal in the extracted folder and run:
 
 ```bash
 # Linux / macOS
