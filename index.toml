@@ -2,7 +2,15 @@ hash-format = "sha256"
 
 [[files]]
 file = "README.md"
-hash = "88f4c7d5dbef9252ca011605eafa3f3fc4a21d86b65ef02d1a2b3eb90fa31302"
+hash = "5f3ef996057d331ef3480ebd2dc980c6082bbe831d5ec6daabd1a5a0c6c33cd3"
+
+[[files]]
+file = "install.ps1"
+hash = "017593b882c70c996d79671ad66373ca484c36a2fcd706e4f789a25675dda3cb"
+
+[[files]]
+file = "install.sh"
+hash = "6f977f52716529a5801ad99fb4d55098e46b1475739df1f312aecd089a5453f1"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"

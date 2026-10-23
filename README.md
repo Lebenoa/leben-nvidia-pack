@@ -16,29 +16,27 @@ The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.
 
 ## Usage
 
-Export the pack to a `.mrpack` and import it into a Modrinth-compatible launcher.
+**One-shot setup** — clones nothing extra; run from the pack checkout after `git clone https://github.com/Lebenoa/leben-nvidia-pack.git`:
+
+```bash
+# Windows (PowerShell)
+powershell -ExecutionPolicy Bypass -File install.ps1
+```
+
+```bash
+# Linux / macOS
+bash install.sh
+```
+
+Both scripts install the [packwiz fork](https://github.com/Lebenoa/packwiz/releases) (trusted CurseForge key) if no `packwiz` is on PATH, then export `leben-nvidia-pack.mrpack`. Import the `.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher) — it installs the mod set and creates the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
 
 > [!TIP]
-> **Recommended: use the [fork](https://github.com/Lebenoa/packwiz/releases).** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is CurseForge-hosted only, which upstream packwiz can't fetch on export (see [Acknowledgments](#acknowledgments)). The fork bundles it into the `.mrpack` automatically.
+> **Recommended: use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is CurseForge-hosted only, which upstream packwiz can't fetch on export (mechanism in [Acknowledgments](#acknowledgments)). The fork bundles it into the `.mrpack` automatically. The scripts above already handle this.
 
-```bash
-curl -L -o packwiz.exe https://github.com/Lebenoa/packwiz/releases/download/v0.0.1/packwiz-windows-amd64.exe
-```
-
-(Linux/macOS: use `packwiz-linux-amd64` / `packwiz-darwin-arm64` etc. from the [release](https://github.com/Lebenoa/packwiz/releases), and verify against `checksums.txt`.)
-
-Then export:
-
-```bash
-git clone https://github.com/Lebenoa/leben-nvidia-pack.git
-cd leben-nvidia-pack
-packwiz modrinth export -o leben-nvidia-pack.mrpack
-```
+**With upstream packwiz:** the export completes without InstaPack. Download [InstaPack 1.0.0](https://www.curseforge.com/minecraft/mc-mods/instapack) manually and drop `instapack-fabric-26.3-1.0.0.jar` into the imported instance's `mods/` folder.
 
 > [!NOTE]
 > Tweak `mods/*.pw.toml` or `pack.toml`, then re-run the export — the `.mrpack` always reflects what's in the repo, no manual manifest editing.
-
-**With upstream packwiz:** the export completes without InstaPack. Download [InstaPack 1.0.0](https://www.curseforge.com/minecraft/mc-mods/instapack) manually and drop `instapack-fabric-26.3-1.0.0.jar` into the imported instance's `mods/` folder.
 
 `--restrictDomains` defaults to true, so all mods must resolve from modrinth.com. Use `-y` to skip prompts non-interactively.
 
