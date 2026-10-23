@@ -1,0 +1,13 @@
+name = "Leben's NVIDIA Pack"
+author = "Lebenoa"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "5a909f14d3a3ae2018a0d4ab9f49ffaa7b7bb1771c0f1d1a964cf821be8e4654"
+
+[versions]
+fabric = "0.20.1"
+minecraft = "26.3"
