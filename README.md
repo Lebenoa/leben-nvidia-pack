@@ -4,7 +4,7 @@ A client-side Fabric modpack for Minecraft 26.3 with rendering and quality-of-li
 
 ## Features
 
-- Render with Sodium and Iris Shaders; add Nvidium 0.4.4 on NVIDIA RTX GPUs — the only NVIDIA-specific mod in the pack.
+- Render with Sodium and Iris Shaders; use Nvidium's alternative renderer on supported NVIDIA GPUs when shaders are inactive.
 - Use client-side interface and quality-of-life mods, including Jade, Mouse Tweaks, and Smooth Scrolling.
 - Export the recorded mod versions to a `.mrpack` for import into a compatible launcher.
 
@@ -53,34 +53,36 @@ I spent hours assembling this mod collection because [Fabulously Optimized](http
 
 ## Mods
 
-All 44 mods, grouped. `both` runs on client and server; `client` is installed on the client only.
+All 44 mods, grouped by purpose. The Side column reproduces this pack's metadata (`client` or `both`); it is not a guarantee of server compatibility.
 
 | Mod | Side | What it does |
 |---|---|---|
 | **Performance** | | |
 | [Sodium](https://modrinth.com/mod/AANobbMI) | client | Replaces Minecraft's renderer with an optimized one for smoother gameplay. |
 | [Lithium](https://modrinth.com/mod/gvQqBUqZ) | both | Optimizes game logic (physics, mob AI, block ticks) without changing vanilla behavior. |
-| [FerriteCore](https://modrinth.com/mod/uXXizFIs) | both | Cuts memory (RAM) usage of world data. |
+| [FerriteCore](https://modrinth.com/mod/uXXizFIs) | both | Reduces Minecraft's memory usage. |
 | [BadOptimizations](https://modrinth.com/mod/g96Z4WVZ) | client | Applies targeted micro-optimizations to frequently-run client code. |
-| [ModernFix-mVUS](https://modrinth.com/mod/TjSm1wrD) | both | Reduces load times, memory use, and lag across many mod scenarios. |
+| [ModernFix-mVUS](https://modrinth.com/mod/TjSm1wrD) | both | Extends ModernFix to additional Minecraft versions, retaining performance, memory, and bug fixes. |
 | [ImmediatelyFast](https://modrinth.com/mod/5ZwdcRci) | client | Optimizes the immediate-mode rendering path (HUD, GUIs, text). |
-| [Entity Culling](https://modrinth.com/mod/NNAgCjsB) | client | Skips rendering entities hidden behind walls. |
+| [Entity Culling](https://modrinth.com/mod/NNAgCjsB) | client | Skips rendering hidden entities and block entities. |
 | [More Culling](https://modrinth.com/mod/51shyZVL) | client | Skips rendering hidden block faces and other culling improvements. |
-| [Better Block Entities](https://modrinth.com/mod/ONZm0H7Y) | client | Renders block entities (chests, signs) faster via baking. |
-| [Dynamic FPS](https://modrinth.com/mod/LQ3K71Q1) | client | Reduces FPS and volume when the window is unfocused or minimized. |
+| [Better Block Entities](https://modrinth.com/mod/ONZm0H7Y) | client | Optimizes block entity rendering, including chests and signs, while preserving animations. |
+| [Dynamic FPS](https://modrinth.com/mod/LQ3K71Q1) | client | Adjusts frame rate, volume, and resource use when backgrounded, idle, or on battery. |
 | [FastQuit](https://modrinth.com/mod/x1hIzbuY) | client | Lets you leave a world while saving finishes in the background. |
-| [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) | both | Server resource packs and resource reloads that take seconds instead of minutes. |
+| [Ixeris](https://modrinth.com/mod/p8RJPJIC) | client | Reduces input-polling overhead, especially with high-polling-rate mice on Windows. |
+| [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) | both | Optimizes resource reloads, skips unchanged server packs, and caches packs to avoid repeat downloads. |
 | **Rendering & visuals** | | |
 | [Iris Shaders](https://modrinth.com/mod/YL57xq9U) | client | Loads OptiFine-style shader packs alongside Sodium. |
-| [Nvidium](https://modrinth.com/mod/SfMw2IZN) | client | Accelerates chunk rendering on NVIDIA RTX GPUs (the pack's only NVIDIA-specific mod). |
-| [LambDynamicLights](https://modrinth.com/mod/yBW8D80W) | client | Held or dropped light sources (torches, lava) actually light up surroundings. |
+| [Nvidium](https://modrinth.com/mod/SfMw2IZN) | client | Replaces Sodium's terrain renderer on mesh-shader-capable NVIDIA GPUs (GTX 16-series and supported newer cards); disables itself while Iris shaders are active. |
+| [LambDynamicLights](https://modrinth.com/mod/yBW8D80W) | client | Adds dynamic lighting from held and dropped light-emitting items and glowing or burning entities. |
 | [3D Skin Layers](https://modrinth.com/mod/zV5r3pPn) | client | Renders the outer skin layer of players in 3D instead of flat. |
-| [Continuity](https://modrinth.com/mod/1IjD5062) | client | Adds connected textures for compatible resource packs. |
+| [Continuity](https://modrinth.com/mod/1IjD5062) | client | Supports connected textures, emissive block/item textures, and custom block layers in compatible resource packs. |
 | [Animatica Refabricated](https://modrinth.com/mod/xEyZuswh) | client | Enables animated textures from OptiFine-style resource packs. |
 | [\[EMF\] Entity Model Features](https://modrinth.com/mod/4I1XuqiY) | client | Loads custom entity models from OptiFine-style resource packs. |
-| [\[ETF\] Entity Texture Features](https://modrinth.com/mod/BVzZfTc1) | client | Loads custom/random entity textures from OptiFine-style resource packs. |
+| [\[ETF\] Entity Texture Features](https://modrinth.com/mod/BVzZfTc1) | client | Supports custom, random, and emissive entity textures and additional player-skin features. |
 | [OptiGUI](https://modrinth.com/mod/JuksLGBQ) | client | Custom container GUI textures from resource packs. |
-| [Sodium Shadowy Path Blocks (SSPB)](https://modrinth.com/mod/EIa1eiMm) | client | Renders shadows under entities for Sodium. |
+| [Puzzle](https://modrinth.com/mod/3IuO68q1) | client | Adds resource-pack features and a shared configuration GUI for OptiFine alternatives. |
+| [Sodium Shadowy Path Blocks (SSPB)](https://modrinth.com/mod/EIa1eiMm) | client | Restores vanilla-like smooth shading on non-full blocks, such as dirt paths, when using Sodium. |
 | [Show Me Your Skin!](https://modrinth.com/mod/bD7YqcA3) | both | Hides or customizes armor rendering so player skins remain visible. |
 | **Interface & QoL** | | |
 | [Mod Menu](https://modrinth.com/mod/mOgUt4GM) | client | Browse installed mods and open their config screens from the title screen. |
@@ -89,12 +91,12 @@ All 44 mods, grouped. `both` runs on client and server; `client` is installed on
 | [Client Sort](https://modrinth.com/mod/K0AkAin6) | both | Sort and move stacks in inventory with keybinds. |
 | [Chest Search Bar](https://modrinth.com/mod/FqlAuAzY) | client | Search field inside container GUIs. |
 | [Chat Heads](https://modrinth.com/mod/Wb5oqrBJ) | client | Player faces next to chat messages. |
-| [Smooth Scrolling](https://modrinth.com/mod/CllP7wW0) | client | Smooth scrolling in menus and lists. |
-| [Smooth Swapping](https://modrinth.com/mod/ydZic5r4) | client | Animated item movement when swapping hotbar slots. |
+| [Smooth Scrolling](https://modrinth.com/mod/CllP7wW0) | client | Adds configurable smooth scrolling to chat, the hotbar, inventories, and lists. |
+| [Smooth Swapping](https://modrinth.com/mod/ydZic5r4) | client | Animates item movement inside inventories. |
 | [Reese's Sodium Options](https://modrinth.com/mod/Bh37bMuy) | client | Reorganized, searchable Sodium video settings screen. |
 | [Sodium Extra](https://modrinth.com/mod/PtjYWJkn) | client | Extra graphics toggles Sodium lacks (fog, animations, particles). |
-| [No Chat Reports](https://modrinth.com/mod/qQyHxfxd) | both | Prevents chat messages from being signed for reporting. |
-| [Remove Reloading Screen](https://modrinth.com/mod/ZP7xHXtw) | client | Hides resource-reload loading screens. |
+| [No Chat Reports](https://modrinth.com/mod/qQyHxfxd) | both | Removes chat signatures where possible; client-side protection depends on server policy. |
+| [Remove Reloading Screen](https://modrinth.com/mod/ZP7xHXtw) | client | Keeps the game accessible during resource reloads, retaining a progress bar. |
 | **Libraries & dependencies** | | |
 | [Fabric API](https://modrinth.com/mod/P7dR8mSH) | both | Core APIs most Fabric mods depend on. |
 | [Fabric Language Kotlin](https://modrinth.com/mod/Ha28R6CL) | both | Lets Kotlin-based Fabric mods run. |
@@ -103,8 +105,6 @@ All 44 mods, grouped. `both` runs on client and server; `client` is installed on
 | [oωo (owo-lib)](https://modrinth.com/mod/ccKDOlHs) | both | UI and utility library used by other mods. |
 | [CICADA](https://modrinth.com/mod/IwCkru1D) | both | Misc utilities used by enjarai's mods. |
 | [Text Placeholder API](https://modrinth.com/mod/eXts2L7r) | client | Placeholder system for dynamic text used by other mods. |
-| [Puzzle](https://modrinth.com/mod/3IuO68q1) | client | Adds OptiFine-alternative resource-pack features and a config GUI. |
-| [Ixeris](https://modrinth.com/mod/p8RJPJIC) | client | Buffered raw input and threaded event polling library. |
 
 ## Acknowledgments
 
