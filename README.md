@@ -18,12 +18,10 @@ The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.
 
 Export the pack to a `.mrpack` and import it into a Modrinth-compatible launcher.
 
-**Use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is hosted on CurseForge only (`mods/instapack.pw.toml` has `metadata:curseforge`). CurseForge returns `downloadUrl` for such distribution-disabled projects only to keys it trusts (known launcher keys); with an untrusted key the file comes back without a URL and export fails. Upstream packwiz removed the trusted MultiMC/PolyMC/Prism key, so InstaPack becomes a manual download. The fork ships that trusted key ([enjarai/the-curseforge-api-key](https://github.com/enjarai/the-curseforge-api-key)), so InstaPack resolves and bundles into the `.mrpack` automatically. The fork keeps the upstream module path, so build it from a clone:
+**Use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is hosted on CurseForge only (`mods/instapack.pw.toml` has `metadata:curseforge`). CurseForge returns `downloadUrl` for such distribution-disabled projects only to keys it trusts (known launcher keys); with an untrusted key the file comes back without a URL and export fails. Upstream packwiz removed the trusted MultiMC/PolyMC/Prism key, so InstaPack becomes a manual download. The fork ships that trusted key ([enjarai/the-curseforge-api-key](https://github.com/enjarai/the-curseforge-api-key)), so InstaPack resolves and bundles into the `.mrpack` automatically. Grab a [fork release](https://github.com/Lebenoa/packwiz/releases) binary for your platform (e.g. `packwiz-windows-amd64.exe`) and put it on your PATH as `packwiz`:
 
 ```bash
-git clone https://github.com/Lebenoa/packwiz.git
-cd packwiz
-go build -o packwiz ./cmd
+curl -LO https://github.com/Lebenoa/packwiz/releases/download/v0.0.1/packwiz-windows-amd64.exe
 ```
 
 Then export:
@@ -31,7 +29,7 @@ Then export:
 ```bash
 git clone https://github.com/Lebenoa/leben-nvidia-pack.git
 cd leben-nvidia-pack
-../packwiz/packwiz modrinth export -o leben-nvidia-pack.mrpack
+packwiz modrinth export -o leben-nvidia-pack.mrpack
 ```
 
 `--restrictDomains` defaults to true, so all mods must resolve from modrinth.com. Use `-y` to skip prompts non-interactively.
