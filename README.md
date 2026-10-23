@@ -8,15 +8,15 @@ A client-side Fabric modpack for Minecraft 26.3. Despite the name, the only NVID
 - Use client-side interface and quality-of-life mods, including Jade, Mouse Tweaks, and Smooth Scrolling.
 - Stop at any version you like — every mod is pinned by packwiz metadata with SHA-512-verified downloads, so importing the pack once resolves the exact same set.
 
-## Installation
+## No Redistribution
 
-This repository is a packwiz pack: `pack.toml` + `index.toml` + `mods/*.pw.toml` metadata. Import it with a launcher that supports packwiz packs (launcher-specific steps are not in this repository).
+This pack is not available anywhere except for this repo (obviously). The reason is licensing issues (InstaPack). So no `.mrpack` or anything of sort. This repo only contains scripts to pull listed mods, build `.mrpack` and drop to launcher that supports
 
 The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.0**).
 
 ## Usage
 
-No git needed (Windows PowerShell, run from anywhere):
+One line install on Windows
 
 ```powershell
 irm https://raw.githubusercontent.com/Lebenoa/leben-nvidia-pack/master/install.ps1 | iex
@@ -47,6 +47,10 @@ Both scripts install the [packwiz fork](https://github.com/Lebenoa/packwiz/relea
 `--restrictDomains` defaults to true, so all mods must resolve from modrinth.com. Use `-y` to skip prompts non-interactively.
 
 Import `leben-nvidia-pack.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher). The launcher installs the module set and launches the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
+
+## Why?
+
+I setup mods for Minecraft for HOURS since [Fabulously Optimized]() have some mods I don't want and doesn't have mods I usually used. This pack contains MOST of my used mods (some are left out as I find even myself hardly used them)
 
 ## Mods
 
