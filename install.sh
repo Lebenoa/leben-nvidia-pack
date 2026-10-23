@@ -17,6 +17,20 @@ case "$(uname -s)-$(uname -m)" in
   *) echo "Unsupported platform: $(uname -s)-$(uname -m)" >&2; exit 1 ;;
 esac
 
+# 0. Ensure we are in the pack checkout (fetch it if run standalone).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ ! -f "$SCRIPT_DIR/pack.toml" ]; then
+    echo "No pack.toml next to the script - fetching pack metadata from GitHub..."
+    TMP="$(mktemp -d)"
+    curl -L -o "$TMP/pack.tar.gz" "https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.tar.gz"
+    tar -xzf "$TMP/pack.tar.gz" -C "$TMP"
+    mkdir -p "$SCRIPT_DIR"
+    cp -r "$TMP"/leben-nvidia-pack-master/* "$SCRIPT_DIR/"
+    rm -rf "$TMP" "$SCRIPT_DIR/install.sh"
+    echo "Pack fetched into $SCRIPT_DIR"
+fi
+cd "$SCRIPT_DIR"
+
 # 1. Resolve packwiz: use existing if present, else download fork release.
 PACKWIZ=""
 if command -v packwiz >/dev/null 2>&1; then

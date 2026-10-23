@@ -15,6 +15,22 @@ function Test-PackwizFork {
     return $out -match "packwiz"
 }
 
+# 0. Ensure we are in the pack checkout (fetch it if run standalone).
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+if (-not (Test-Path (Join-Path $here "pack.toml"))) {
+    Write-Host "No pack.toml next to the script - fetching pack metadata from GitHub..."
+    $tmp = Join-Path ([System.IO.Path]::GetTempPath()) ([System.Guid]::NewGuid().ToString("N"))
+    New-Item -ItemType Directory -Path $tmp | Out-Null
+    $zip = Join-Path $tmp "pack.zip"
+    Invoke-WebRequest -Uri "https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip" -OutFile $zip
+    Expand-Archive -Path $zip -DestinationPath $tmp
+    $extracted = Join-Path $tmp "leben-nvidia-pack-master"
+    # Work inside the extracted checkout for the rest of the run.
+    Set-Location $extracted
+} else {
+    Set-Location $here
+}
+
 # 1. Resolve packwiz: use existing if present, else download fork release.
 $packwiz = $null
 $existing = Get-Command packwiz -ErrorAction SilentlyContinue

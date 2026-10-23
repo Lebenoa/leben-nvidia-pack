@@ -16,7 +16,13 @@ The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.
 
 ## Usage
 
-**One-shot setup** — clones nothing extra; run from the pack checkout after `git clone https://github.com/Lebenoa/leben-nvidia-pack.git`:
+No git needed (Windows PowerShell, run from anywhere):
+
+```powershell
+irm https://raw.githubusercontent.com/Lebenoa/leben-nvidia-pack/master/install.ps1 | iex
+```
+
+**Already have the repo** (`git clone https://github.com/Lebenoa/leben-nvidia-pack.git`):
 
 ```bash
 # Windows (PowerShell)
@@ -28,7 +34,7 @@ powershell -ExecutionPolicy Bypass -File install.ps1
 bash install.sh
 ```
 
-Both scripts install the [packwiz fork](https://github.com/Lebenoa/packwiz/releases) (trusted CurseForge key) if no `packwiz` is on PATH, then export `leben-nvidia-pack.mrpack`. Import the `.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher) — it installs the mod set and creates the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
+Both scripts install the [packwiz fork](https://github.com/Lebenoa/packwiz/releases) (trusted CurseForge key) if no `packwiz` is on PATH — also fetching the pack itself when run outside a checkout (downloaded script variant) — then export `leben-nvidia-pack.mrpack`. Import the `.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher) — it installs the mod set and creates the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
 
 > [!TIP]
 > **Recommended: use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is CurseForge-hosted only, which upstream packwiz can't fetch on export (mechanism in [Acknowledgments](#acknowledgments)). The fork bundles it into the `.mrpack` automatically. The scripts above already handle this.
