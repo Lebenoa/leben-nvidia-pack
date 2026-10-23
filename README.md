@@ -1,22 +1,22 @@
 # Leben's NVIDIA Pack
 
-A client-side Fabric modpack for Minecraft 26.2, configured with NVIDIA-oriented rendering mods and client quality-of-life mods.
+A client-side Fabric modpack for Minecraft 26.3. Despite the name, the only NVIDIA-specific mod is Nvidium (RTX-only) — Sodium, Iris Shaders, and the rest run on any GPU.
 
 ## Features
 
-- Use Sodium, Iris, and Nvidium for client rendering and shader-related functionality.
+- Render with Sodium and Iris Shaders; add Nvidium 0.4.4 on NVIDIA RTX GPUs — the only NVIDIA-specific mod in the pack.
 - Use client-side interface and quality-of-life mods, including Jade, Mouse Tweaks, and Smooth Scrolling.
-- Track mod versions and downloads through packwiz metadata.
+- Stop at any version you like — every mod is pinned by packwiz metadata with SHA-512-verified downloads, so importing the pack once resolves the exact same set.
 
 ## Installation
 
-This repository contains a packwiz pack definition (`pack.toml`), index (`index.toml`), and mod metadata. Import or install it using a launcher that supports packwiz packs; launcher-specific steps are not included in this repository.
+This repository is a packwiz pack: `pack.toml` + `index.toml` + `mods/*.pw.toml` metadata. Import it with a launcher that supports packwiz packs (launcher-specific steps are not in this repository).
 
-The pack targets Minecraft **26.2** and Fabric **0.20.1**. Its metadata uses packwiz format **1.1.0**.
+The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.0**).
 
 ## Usage
 
-Import the pack into a packwiz-compatible launcher, then launch the Minecraft instance created by that launcher. This is a client pack; the Sodium metadata identifies it as client-side.
+Import the pack into a packwiz-compatible launcher and launch the instance it creates. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
 
 ## Acknowledgments
 
