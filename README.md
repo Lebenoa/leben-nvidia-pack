@@ -1,6 +1,6 @@
 # Leben's NVIDIA Pack
 
-A client-side Fabric modpack for Minecraft 26.3 with rendering and quality-of-life mods. Despite the name, Nvidium is the only NVIDIA-specific mod.
+A client-side Fabric modpack for Minecraft 26.3 with rendering and quality-of-life mods. ***Despite the name, Nvidium is the only NVIDIA-specific mod.***
 
 ## Features
 
