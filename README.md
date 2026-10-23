@@ -21,8 +21,10 @@ Export the pack to a `.mrpack` and import it into a Modrinth-compatible launcher
 **Use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is hosted on CurseForge only (`mods/instapack.pw.toml` has `metadata:curseforge`). CurseForge returns `downloadUrl` for such distribution-disabled projects only to keys it trusts (known launcher keys); with an untrusted key the file comes back without a URL and export fails. Upstream packwiz removed the trusted MultiMC/PolyMC/Prism key, so InstaPack becomes a manual download. The fork ships that trusted key ([enjarai/the-curseforge-api-key](https://github.com/enjarai/the-curseforge-api-key)), so InstaPack resolves and bundles into the `.mrpack` automatically. Grab a [fork release](https://github.com/Lebenoa/packwiz/releases) binary for your platform (e.g. `packwiz-windows-amd64.exe`) and put it on your PATH as `packwiz`:
 
 ```bash
-curl -LO https://github.com/Lebenoa/packwiz/releases/download/v0.0.1/packwiz-windows-amd64.exe
+curl -L -o packwiz.exe https://github.com/Lebenoa/packwiz/releases/download/v0.0.1/packwiz-windows-amd64.exe
 ```
+
+(Linux/macOS: use `packwiz-linux-amd64` / `packwiz-darwin-arm64` etc. from the [release](https://github.com/Lebenoa/packwiz/releases), and verify against `checksums.txt`.)
 
 Then export:
 
