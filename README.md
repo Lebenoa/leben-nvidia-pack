@@ -8,11 +8,11 @@ A client-side Fabric modpack for Minecraft 26.3 with rendering and quality-of-li
 - Use client-side interface and quality-of-life mods, including Jade, Mouse Tweaks, and Smooth Scrolling.
 - Export the recorded mod versions to a `.mrpack` for import into a compatible launcher.
 
-## No Redistribution
+## Why no `.mrpack`?
 
-No prebuilt `.mrpack` is published here because of the maintainer's redistribution concerns about InstaPack. This repository provides metadata and scripts to download the mods and build the pack locally. This policy is not a license grant for the included mods.
+InstaPack (and some others) have third-party distribution disabled on CurseForge, so I'm not comfortable shipping a prebuilt `.mrpack` that bundles their jars. The scripts in this repo download everything and build the pack on your machine instead. That's my choice, not a license — the mods still belong to their authors.
 
-The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.0**).
+Targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.0**).
 
 ## Installation
 
@@ -51,7 +51,7 @@ After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launc
 
 ## Why?
 
-I spent hours assembling this mod collection because [Fabulously Optimized](https://modrinth.com/modpack/fabulously-optimized) includes some mods I do not want and omits others I use. This pack includes most of my usual mods, leaving out those I rarely use.
+Honestly? [Fabulously Optimized](https://modrinth.com/modpack/fabulously-optimized) ships mods I never use and is missing ones I always want. So this is my own take — most of the mods I actually play with, minus the stuff I'd just turn off anyway.
 
 ## Mods
 
