@@ -18,7 +18,7 @@ The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.
 
 Export the pack to a `.mrpack` and import it into a Modrinth-compatible launcher.
 
-**Use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is hosted on CurseForge only (`mods/instapack.pw.toml` has `metadata:curseforge`). CurseForge returns `downloadUrl` for such distribution-disabled projects only to keys it trusts (known launcher keys); with an untrusted key the file comes back without a URL and export fails. Upstream packwiz removed the trusted MultiMC/PolyMC/Prism key, so InstaPack becomes a manual download. The fork ships that trusted key ([enjarai/the-curseforge-api-key](https://github.com/enjarai/the-curseforge-api-key)), so InstaPack resolves and bundles into the `.mrpack` automatically. Grab a [fork release](https://github.com/Lebenoa/packwiz/releases) binary for your platform (e.g. `packwiz-windows-amd64.exe`) and put it on your PATH as `packwiz`:
+**Recommended: use the [fork](https://github.com/Lebenoa/packwiz/releases).** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is CurseForge-hosted only, which upstream packwiz can't fetch on export (see [Acknowledgments](#acknowledgments)). The fork bundles it into the `.mrpack` automatically.
 
 ```bash
 curl -L -o packwiz.exe https://github.com/Lebenoa/packwiz/releases/download/v0.0.1/packwiz-windows-amd64.exe
@@ -34,6 +34,8 @@ cd leben-nvidia-pack
 packwiz modrinth export -o leben-nvidia-pack.mrpack
 ```
 
+**With upstream packwiz:** the export completes without InstaPack. Download [InstaPack 1.0.0](https://www.curseforge.com/minecraft/mc-mods/instapack) manually and drop `instapack-fabric-26.3-1.0.0.jar` into the imported instance's `mods/` folder.
+
 `--restrictDomains` defaults to true, so all mods must resolve from modrinth.com. Use `-y` to skip prompts non-interactively.
 
 Import `leben-nvidia-pack.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher). The launcher installs the module set and launches the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
@@ -41,6 +43,8 @@ Import `leben-nvidia-pack.mrpack` into a Modrinth-compatible launcher (e.g. Pris
 ## Acknowledgments
 
 This pack is maintained with a personal fork of the packwiz CLI: [Lebenoa/packwiz](https://github.com/Lebenoa/packwiz), forked from [packwiz/packwiz](https://github.com/packwiz/packwiz).
+
+The fork's single change vs upstream is shipping the trusted [MultiMC/PolyMC/Prism CurseForge API key](https://github.com/enjarai/the-curseforge-api-key). CurseForge only returns `downloadUrl` for projects with third-party distribution disabled (like InstaPack) when the request uses a key it trusts; with an untrusted key the file comes back without a URL and export fails. Upstream removed this key, so its exports degrade that mod to a manual download — the fork resolves and bundles it automatically ([release binaries](https://github.com/Lebenoa/packwiz/releases) for Windows/macOS/Linux).
 
 ## License
 
