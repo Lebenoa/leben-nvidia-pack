@@ -78,7 +78,7 @@ All 44 mods, grouped. `both` runs on client and server; `client` is installed on
 | [\[ETF\] Entity Texture Features](https://modrinth.com/mod/BVzZfTc1) | client | Loads custom/random entity textures from OptiFine-style resource packs. |
 | [OptiGUI](https://modrinth.com/mod/JuksLGBQ) | client | Custom container GUI textures from resource packs. |
 | [Sodium Shadowy Path Blocks (SSPB)](https://modrinth.com/mod/EIa1eiMm) | client | Renders shadows under entities for Sodium. |
-| [Show Me Your Skin!](https://modrinth.com/mod/bD7YqcA3) | both | Fixes other players' skin layers not rendering in multiplayer. |
+| [Show Me Your Skin!](https://modrinth.com/mod/bD7YqcA3) | both | Hides or customizes armor rendering so player skins remain visible. |
 | **Interface & QoL** | | |
 | [Mod Menu](https://modrinth.com/mod/mOgUt4GM) | client | Browse installed mods and open their config screens from the title screen. |
 | [Jade](https://modrinth.com/mod/nvQzSEkH) | both | Shows what block/entity you're looking at. |
