@@ -16,7 +16,22 @@ The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.
 
 ## Usage
 
-Import the pack into a packwiz-compatible launcher and launch the instance it creates. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
+Export the pack to a `.mrpack` and import it into a Modrinth-compatible launcher.
+
+Prerequisites: [packwiz](https://github.com/packwiz/packwiz) CLI on your PATH.
+
+```bash
+git clone https://github.com/Lebenoa/leben-nvidia-pack.git
+cd leben-nvidia-pack
+```
+
+```bash
+packwiz modrinth export -o leben-nvidia-pack.mrpack
+```
+
+`--restrictDomains` defaults to true, so all mods must resolve from modrinth.com. Use `-y` to skip prompts non-interactively.
+
+Import `leben-nvidia-pack.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher). The launcher installs the module set and launches the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
 
 ## Acknowledgments
 
