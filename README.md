@@ -1,32 +1,33 @@
 # Leben's NVIDIA Pack
 
-A client-side Fabric modpack for Minecraft 26.3. Despite the name, the only NVIDIA-specific mod is Nvidium (RTX-only) — Sodium, Iris Shaders, and the rest run on any GPU.
+A client-side Fabric modpack for Minecraft 26.3 with rendering and quality-of-life mods. Despite the name, Nvidium is the only NVIDIA-specific mod.
 
 ## Features
 
 - Render with Sodium and Iris Shaders; add Nvidium 0.4.4 on NVIDIA RTX GPUs — the only NVIDIA-specific mod in the pack.
 - Use client-side interface and quality-of-life mods, including Jade, Mouse Tweaks, and Smooth Scrolling.
-- Stop at any version you like — every mod is pinned by packwiz metadata with SHA-512-verified downloads, so importing the pack once resolves the exact same set.
+- Export the recorded mod versions to a `.mrpack` for import into a compatible launcher.
 
 ## No Redistribution
 
-This pack is not available anywhere except for this repo (obviously). The reason is licensing issues (InstaPack). So no `.mrpack` or anything of sort. This repo only contains scripts to pull listed mods, build `.mrpack` and drop to launcher that supports
+No prebuilt `.mrpack` is published here because of the maintainer's redistribution concerns about InstaPack. This repository provides metadata and scripts to download the mods and build the pack locally. This policy is not a license grant for the included mods.
 
 The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.0**).
 
+## Installation
+
+Download the repository using **Code → Download ZIP**, or [download the ZIP directly](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip). Extract it before running either installer; Git is not required.
+
+Windows requires PowerShell 5.1 or later; its downloader and ZIP extraction commands are built in. Linux/macOS require bash and curl, plus tar when the script must fetch the pack. Both paths require internet access and a launcher that imports `.mrpack` files.
+
 ## Usage
 
-One line install on Windows
+Open a terminal in the extracted folder containing `pack.toml` and the installer scripts.
+
+Windows PowerShell:
 
 ```powershell
-irm https://raw.githubusercontent.com/Lebenoa/leben-nvidia-pack/master/install.ps1 | iex
-```
-
-**Already have the repo** (`git clone https://github.com/Lebenoa/leben-nvidia-pack.git`):
-
-```bash
-# Windows (PowerShell)
-powershell -ExecutionPolicy Bypass -File install.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
 ```bash
@@ -34,23 +35,21 @@ powershell -ExecutionPolicy Bypass -File install.ps1
 bash install.sh
 ```
 
-Both scripts install the [packwiz fork](https://github.com/Lebenoa/packwiz/releases) (trusted CurseForge key) if no `packwiz` is on PATH — also fetching the pack itself when run outside a checkout (downloaded script variant) — then export `leben-nvidia-pack.mrpack`. Import the `.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher) — it installs the mod set and creates the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
+The scripts reuse `packwiz` on PATH, or download fork release **v0.0.1** if none is found, then export `leben-nvidia-pack.mrpack`. The Windows downloader selects the amd64 build; the Unix script selects an asset using the OS and architecture. These scripts export the pack; they do not install a launcher or Minecraft.
 
 > [!TIP]
-> **Recommended: use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is CurseForge-hosted only, which upstream packwiz can't fetch on export (mechanism in [Acknowledgments](#acknowledgments)). The fork bundles it into the `.mrpack` automatically. The scripts above already handle this.
+> **Recommended: use the [fork release](https://github.com/Lebenoa/packwiz/releases).** It can fetch InstaPack automatically. If `packwiz` is already on PATH, the scripts reuse it without verifying that it is the fork; an upstream binary may require a manual download. See [Acknowledgments](#acknowledgments) for the API-key explanation.
 
-**With upstream packwiz:** the export completes without InstaPack. Download [InstaPack 1.0.0](https://www.curseforge.com/minecraft/mc-mods/instapack) manually and drop `instapack-fabric-26.3-1.0.0.jar` into the imported instance's `mods/` folder.
+**With upstream packwiz:** if export requests a manual download, obtain [InstaPack 1.0.0 for Fabric 26.3](https://www.curseforge.com/minecraft/mc-mods/instapack/files/9099256) and follow packwiz's prompt before retrying. Do not assume a failed export produced a complete pack.
 
 > [!NOTE]
-> Tweak `mods/*.pw.toml` or `pack.toml`, then re-run the export — the `.mrpack` always reflects what's in the repo, no manual manifest editing.
+> After changing the pack metadata, run the installer again to generate a new `.mrpack`.
 
-`--restrictDomains` defaults to true, so all mods must resolve from modrinth.com. Use `-y` to skip prompts non-interactively.
-
-Import `leben-nvidia-pack.mrpack` into a Modrinth-compatible launcher (e.g. Prism Launcher, ATLauncher). The launcher installs the module set and launches the Minecraft 26.3 / Fabric 0.20.1 instance. This is a client pack — the metadata marks Sodium, Nvidium, and Iris Shaders as `side = "client"`.
+After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launcher, such as Prism Launcher or ATLauncher. Launch the imported Minecraft **26.3** / Fabric **0.20.1** instance.
 
 ## Why?
 
-I setup mods for Minecraft for HOURS since [Fabulously Optimized]() have some mods I don't want and doesn't have mods I usually used. This pack contains MOST of my used mods (some are left out as I find even myself hardly used them)
+I spent hours assembling this mod collection because [Fabulously Optimized](https://modrinth.com/modpack/fabulously-optimized) includes some mods I do not want and omits others I use. This pack includes most of my usual mods, leaving out those I rarely use.
 
 ## Mods
 
