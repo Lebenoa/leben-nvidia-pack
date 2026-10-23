@@ -18,7 +18,8 @@ The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.
 
 Export the pack to a `.mrpack` and import it into a Modrinth-compatible launcher.
 
-**Recommended: use the [fork](https://github.com/Lebenoa/packwiz/releases).** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is CurseForge-hosted only, which upstream packwiz can't fetch on export (see [Acknowledgments](#acknowledgments)). The fork bundles it into the `.mrpack` automatically.
+> [!TIP]
+> **Recommended: use the [fork](https://github.com/Lebenoa/packwiz/releases).** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is CurseForge-hosted only, which upstream packwiz can't fetch on export (see [Acknowledgments](#acknowledgments)). The fork bundles it into the `.mrpack` automatically.
 
 ```bash
 curl -L -o packwiz.exe https://github.com/Lebenoa/packwiz/releases/download/v0.0.1/packwiz-windows-amd64.exe
@@ -34,7 +35,7 @@ cd leben-nvidia-pack
 packwiz modrinth export -o leben-nvidia-pack.mrpack
 ```
 
-> [!TIP]
+> [!NOTE]
 > Tweak `mods/*.pw.toml` or `pack.toml`, then re-run the export — the `.mrpack` always reflects what's in the repo, no manual manifest editing.
 
 **With upstream packwiz:** the export completes without InstaPack. Download [InstaPack 1.0.0](https://www.curseforge.com/minecraft/mc-mods/instapack) manually and drop `instapack-fabric-26.3-1.0.0.jar` into the imported instance's `mods/` folder.
