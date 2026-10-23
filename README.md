@@ -18,7 +18,7 @@ The pack targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.
 
 Export the pack to a `.mrpack` and import it into a Modrinth-compatible launcher.
 
-**Use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is hosted on CurseForge only (`mods/instapack.pw.toml` has `metadata:curseforge`). Upstream packwiz ships the shared MultiMC/Prism API key, which CurseForge no longer trusts, so that mod degrades to a manual download. The fork's single change (`fix(curseforge): use trusted launcher API key`) resolves it, and the mod gets bundled into the `.mrpack` automatically. Upstream installs (`go install github.com/packwiz/packwiz@latest`) give you the broken key; the fork keeps the upstream module path, so build it from a clone:
+**Use the fork, not upstream.** One mod — [InstaPack](https://www.curseforge.com/minecraft/mc-mods/instapack) — is hosted on CurseForge only (`mods/instapack.pw.toml` has `metadata:curseforge`). CurseForge returns `downloadUrl` for such distribution-disabled projects only to keys it trusts (known launcher keys); with an untrusted key the file comes back without a URL and export fails. Upstream packwiz removed the trusted MultiMC/PolyMC/Prism key, so InstaPack becomes a manual download. The fork ships that trusted key ([enjarai/the-curseforge-api-key](https://github.com/enjarai/the-curseforge-api-key)), so InstaPack resolves and bundles into the `.mrpack` automatically. The fork keeps the upstream module path, so build it from a clone:
 
 ```bash
 git clone https://github.com/Lebenoa/packwiz.git
