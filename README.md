@@ -49,6 +49,8 @@ The scripts reuse `packwiz` on PATH, or download fork release **v0.0.1** if none
 
 After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launcher, such as Prism Launcher or ATLauncher. Launch the imported Minecraft **26.3** / Fabric **0.20.1** instance.
 
+Dark Smooth GUI and Glowing Ores – Borderful Edition are selected by default through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu. Copying this file into an existing instance replaces its saved options; these defaults are intended for a fresh instance.
+
 ## Why?
 
 Honestly? [Fabulously Optimized](https://modrinth.com/modpack/fabulously-optimized) ships mods I never use and is missing ones I always want. So this is my own take — most of the mods I actually play with, minus the stuff I'd just turn off anyway.

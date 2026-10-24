@@ -1,0 +1,1 @@
+resourcePacks:["vanilla","file/Dark Smooth GUI 26.3.x blue-3D94FF-5EA6FF-0049A3-00316E.zip","file/Glowing Ores - Borderful Edition (8.0.1v).zip"]

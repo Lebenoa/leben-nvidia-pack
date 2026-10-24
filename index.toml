@@ -2,7 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = "README.md"
-hash = "4c064851cc06a7a5fe609e973ab8ae166c2c1587f59428038b3594e7080d49c6"
+hash = "beb5b9da3b0a84806ac5fccd944a14b71fc7e446ec049a3af770c8edf8048ecd"
+
+[[files]]
+file = "install.cmd"
+hash = "f9a8f4d1c4540099f7c971fcc1324694cc942ef13dfe6458a6d49da3caff3740"
 
 [[files]]
 file = "install.ps1"
@@ -233,8 +237,12 @@ hash = "2927b1f407d827809c1d1cf9e9622b9d27be0529427510662cd270a85db40bda"
 metafile = true
 
 [[files]]
+file = "options.txt"
+hash = "8b1db7ee906a8f52f587ccc661b51636aacf9715d4fba3792620c766da47d202"
+
+[[files]]
 file = "resourcepacks/dark-smooth-gui.pw.toml"
-hash = "361929a779217190c12205f67def67ff0329cd2904308e3931bbf2d62ccfa554"
+hash = "0a1216632c1ca9ac5c3d23e2e2718290601b93d94c168529a229e146925d2393"
 metafile = true
 
 [[files]]
