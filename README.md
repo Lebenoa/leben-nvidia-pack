@@ -1,6 +1,6 @@
 # Leben's NVIDIA Pack
 
-A client-side Fabric modpack for Minecraft 26.3 with rendering and quality-of-life mods. ***Despite the name, Nvidium is the only NVIDIA-specific mod.***
+A client-side Fabric modpack for Minecraft 26.2 with rendering and quality-of-life mods. ***Despite the name, Nvidium is the only NVIDIA-specific mod.***
 
 ## Features
 
@@ -12,7 +12,7 @@ A client-side Fabric modpack for Minecraft 26.3 with rendering and quality-of-li
 
 InstaPack (and some others) have third-party distribution disabled on CurseForge, so I'm not comfortable shipping a prebuilt `.mrpack` that bundles their jars. The scripts in this repo download everything and build the pack on your machine instead. That's my choice, not a license — the mods still belong to their authors.
 
-Targets Minecraft **26.3** and Fabric **0.20.1** (packwiz format **1.1.0**).
+Targets Minecraft **26.2** and Fabric **0.20.1** (packwiz format **1.1.0**). Use Java **25 or later**, as required by the selected mods.
 
 ## Installation
 
@@ -42,14 +42,14 @@ The scripts reuse `packwiz` on PATH, or download fork release **v0.0.1** if none
 > [!TIP]
 > **Recommended: use the [fork release](https://github.com/Lebenoa/packwiz/releases).** It can fetch InstaPack automatically. If `packwiz` is already on PATH, the scripts reuse it without verifying that it is the fork; an upstream binary may require a manual download. See [Acknowledgments](#acknowledgments) for the API-key explanation.
 
-**With upstream packwiz:** if export requests a manual download, obtain [InstaPack 1.0.0 for Fabric 26.3](https://www.curseforge.com/minecraft/mc-mods/instapack/files/9099256) and follow packwiz's prompt before retrying. Do not assume a failed export produced a complete pack.
+**With upstream packwiz:** if export requests a manual download, obtain [InstaPack 1.0.0 for Fabric 26.2](https://www.curseforge.com/minecraft/mc-mods/instapack/files/9099255) and follow packwiz's prompt before retrying. Do not assume a failed export produced a complete pack.
 
 > [!NOTE]
 > After changing the pack metadata, run the installer again to generate a new `.mrpack`.
 
-After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launcher, such as Prism Launcher or ATLauncher. Launch the imported Minecraft **26.3** / Fabric **0.20.1** instance.
+After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launcher, such as Prism Launcher or ATLauncher. Launch the imported Minecraft **26.2** / Fabric **0.20.1** instance.
 
-Dark Smooth GUI and Glowing Ores – Borderful Edition are selected by default through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu. Copying this file into an existing instance replaces its saved options; these defaults are intended for a fresh instance.
+Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, ClientSort Dark Mode, Continuity's Default Connected Textures, and Glass Pane Culling Fix are selected by default through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu. Copying this file into an existing instance replaces its saved options; these defaults are intended for a fresh instance.
 
 ## Why?
 
