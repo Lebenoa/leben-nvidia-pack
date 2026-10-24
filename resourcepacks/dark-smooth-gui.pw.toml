@@ -1,0 +1,13 @@
+name = "Dark Smooth GUI"
+filename = "Dark Smooth GUI 26.3.x blue-3D94FF-5EA6FF-0049A3-00316E.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/3BPM3cU5/versions/sNAf0sPk/Dark%20Smooth%20GUI%2026.3.x%20blue-3D94FF-5EA6FF-0049A3-00316E.zip"
+hash-format = "sha512"
+hash = "593f8d5cf829a52da1772ce8805c57f56b57bebe928762ad20a11377b6caf963d6e1729234759cbf5dc9e749946a0c721e6534bf6e96ca320286e7fd7c37fbc7"
+
+[update]
+[update.modrinth]
+mod-id = "3BPM3cU5"
+version = "sNAf0sPk"

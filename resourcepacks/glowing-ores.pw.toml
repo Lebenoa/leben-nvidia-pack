@@ -1,0 +1,13 @@
+name = "Glowing Ores! - Borderful Edition"
+filename = "Glowing Ores - Borderful Edition (8.0.1v).zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/26bFJKVz/versions/3SYXdd58/Glowing%20Ores%20-%20Borderful%20Edition%20%288.0.1v%29.zip"
+hash-format = "sha512"
+hash = "12d3e9842a570012049c8aafb57330858a86f09c62db9f039bd44a28953a3f328984edfb981a069c965bafc4a73eeded0cb28d13f66dc95ced8e927904663665"
+
+[update]
+[update.modrinth]
+mod-id = "26bFJKVz"
+version = "3SYXdd58"

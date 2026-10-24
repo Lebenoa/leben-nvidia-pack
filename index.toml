@@ -231,3 +231,13 @@ metafile = true
 file = "mods/yacl.pw.toml"
 hash = "2927b1f407d827809c1d1cf9e9622b9d27be0529427510662cd270a85db40bda"
 metafile = true
+
+[[files]]
+file = "resourcepacks/dark-smooth-gui.pw.toml"
+hash = "361929a779217190c12205f67def67ff0329cd2904308e3931bbf2d62ccfa554"
+metafile = true
+
+[[files]]
+file = "resourcepacks/glowing-ores.pw.toml"
+hash = "7e5a369aa5f9094e8e7faaadf55a08427e1d29636d481eadcbd6f2abd5a67c68"
+metafile = true
