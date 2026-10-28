@@ -57,6 +57,8 @@ Default movement keybinds swap vanilla's sneak and sprint keys: **Left Ctrl** to
 
 Additional defaults: VSync off, 200 FPS limit, 8-chunk render and simulation distances, mipmap level 2, and fast clouds. Screen effects are off, FOV effects are about 2.29%, mouse sensitivity is 25%, and damage tilt is 50%. Auto-jump and pause on lost focus are off; advanced item tooltips are on. Master volume is about 14.57%; music and ambient sounds are muted. The swap-offhand key is left at Minecraft's default. Bundled resource-pack priority follows the reference instance; its three unbundled helper packs are not enabled.
 
+The pack also includes configs for Dynamic FPS, More Culling, Smooth Swapping, Sodium Shadowy Path Blocks, ClientSort, Show Me Your Skin!, Mod Menu, and No Chat Reports. Iris's maximum shadow render distance is set to 6; other Iris settings are left at their defaults. Importing these files into an existing instance can replace that instance's mod settings.
+
 ## Why?
 
 Honestly? [Fabulously Optimized](https://modrinth.com/modpack/fabulously-optimized) ships mods I never use and is missing ones I always want. So this is my own take — most of the mods I actually play with, minus the stuff I'd just turn off anyway.

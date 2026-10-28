@@ -2,7 +2,47 @@ hash-format = "sha256"
 
 [[files]]
 file = "README.md"
-hash = "d20b7ff1dbfa7873acad38d7960488f1edd949be72ebed19e935175a765d5b2d"
+hash = "01701f6a5f766dee641a9e863019dd83c08e5586a658f08756b102bd2f38d0e5"
+
+[[files]]
+file = "config/NoChatReports/NCR-Client.json"
+hash = "e1ef79c2827deb3971b388c2bd63c183ac03ac327c91a4e28b7af96c69c472db"
+
+[[files]]
+file = "config/NoChatReports/NCR-Common.json"
+hash = "77777d6d4901caa3b49847bde37722ee3cf81d745cfc2e8ffdd2aca6211418e8"
+
+[[files]]
+file = "config/clientsort.json"
+hash = "773d8d196608d82f656e0e31239d9d07051098f05b1a54e7dc172ab75fa25253"
+
+[[files]]
+file = "config/dynamic_fps.json"
+hash = "8eee8d02db942201c59e85a373513a7b906c4c417462374172b9c2d1b7f2997f"
+
+[[files]]
+file = "config/iris.properties"
+hash = "e139dbd0861e307538a058dc0e8abed0fbe4e3d761be91e796d9b56e27db0eed"
+
+[[files]]
+file = "config/modmenu.json"
+hash = "37733cc7f32963b2e7de3520eb737255f28dd5dae51c10dcaff838eb3afcfd73"
+
+[[files]]
+file = "config/moreculling.toml"
+hash = "a0b2444db1aa65997fd715d0c2a7753f5be302d1304364993260fb7489c1eddb"
+
+[[files]]
+file = "config/showmeyourskin.json"
+hash = "1feccfcbec5830f331011b079d2fff743354b670e9fb45a8899347cd6b5fad4f"
+
+[[files]]
+file = "config/smoothswapping.json"
+hash = "45e8bcb4fa6100ad2e9538f77253dcddedb2e5b9dd7694da2c80942fb2ae991a"
+
+[[files]]
+file = "config/sodium-shadowy-path-blocks-options.json"
+hash = "71c8d050837ca80f08b33231ffaf25907fe88536015fddcfac4099a0467fff63"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
