@@ -2,6 +2,9 @@
 
 A client-side Fabric modpack for Minecraft 26.2 with rendering and quality-of-life mods. ***Despite the name, Nvidium is the only NVIDIA-specific mod.***
 
+> [!NOTE]
+> `master` stays on Minecraft 26.2 to retain Nvidium and the other mods removed for compatibility with 26.3. For the newer pack, see the [26.3 branch](https://github.com/Lebenoa/leben-nvidia-pack/tree/26.3) and its README.
+
 **NoRisk Client users:** a prebuilt `leben-nvidia-pack.noriskpack` is available on the [Releases page](https://github.com/Lebenoa/leben-nvidia-pack/releases) — download it and import it into NoRisk Client. No jars are bundled; NoRisk fetches every mod itself.
 
 ## Features
