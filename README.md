@@ -49,7 +49,9 @@ The scripts reuse `packwiz` on PATH, or download fork release **v0.0.1** if none
 
 After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launcher, such as Prism Launcher or ATLauncher. Launch the imported Minecraft **26.2** / Fabric **0.20.1** instance.
 
-Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, ClientSort Dark Mode, Continuity's Default Connected Textures, and Glass Pane Culling Fix are selected by default through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu. Copying this file into an existing instance replaces its saved options; these defaults are intended for a fresh instance.
+Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, [Icons - Tooltips](https://modrinth.com/resourcepack/icons-tooltips), [Icons - Enchantments](https://modrinth.com/resourcepack/icons-enchantments), ClientSort Dark Mode, Continuity's Default Connected Textures, and Glass Pane Culling Fix are selected by default through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu. Copying this file into an existing instance replaces its saved options; these defaults are intended for a fresh instance.
+
+Icons - Tooltips 1.3 supports Minecraft 26.2. Icons - Enchantments 1.2 only lists support through 1.21.11; it is included intentionally, but its in-game compatibility with 26.2 is unverified.
 
 ## Why?
 
