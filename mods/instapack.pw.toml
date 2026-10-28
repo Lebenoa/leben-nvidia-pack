@@ -1,13 +1,13 @@
 name = "InstaPack"
-filename = "instapack-fabric-26.2-1.0.0.jar"
+filename = "instapack-fabric-26.3-1.0.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "388405704c7a987ce7792f71049987465fec7007"
+hash = "d98c1987c4566777835d7cc7f88d275bdc3b36ab"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9099255
+file-id = 9099256
 project-id = 1733601

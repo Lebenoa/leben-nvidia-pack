@@ -1,6 +1,7 @@
 version:4903
 graphicsPreset:"custom"
-resourcePacks:["vanilla","continuity:glass_pane_culling_fix","continuity:default","clientsort:clientsort-dark-mode","file/Dark Smooth GUI 26.2.x.zip","file/Icons - Tooltips v.1.3.zip","file/Glowing Ores - Borderful Edition (8.0.1v).zip","file/EvenBetterEnchants_v3_1.21.5+.zip","file/Icons - Enchantments v.1.2.zip"]
+resourcePacks:["vanilla","continuity:glass_pane_culling_fix","continuity:default","clientsort:clientsort-dark-mode","file/Dark Smooth GUI 26.3.x blue-3D94FF-5EA6FF-0049A3-00316E.zip","file/Icons - Tooltips v.1.3.zip","file/Glowing Ores - Borderful Edition (8.0.1v).zip","file/EvenBetterEnchants_v3_1.21.5+.zip","file/Icons - Enchantments v.1.2.zip"]
+incompatibleResourcePacks:["file/Glowing Ores - Borderful Edition (8.0.1v).zip"]
 key_key.sneak:key.keyboard.left.control
 key_key.sprint:key.keyboard.left.shift
 fov:0.825
@@ -18,6 +19,7 @@ damageTiltStrength:0.5
 autoJump:false
 advancedItemTooltips:true
 pauseOnLostFocus:false
+skipMultiplayerWarning:true
 chatLineSpacing:0.30985915492957744
 rawMouseInput:true
 onboardAccessibility:false

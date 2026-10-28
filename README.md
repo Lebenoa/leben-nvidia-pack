@@ -63,6 +63,8 @@ Import `leben-nvidia-pack.noriskpack` into NoRisk Client. This export sets the p
 
 Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, [Icons - Tooltips](https://modrinth.com/resourcepack/icons-tooltips), [Icons - Enchantments](https://modrinth.com/resourcepack/icons-enchantments), ClientSort Dark Mode, Continuity's Default Connected Textures, and Glass Pane Culling Fix are enabled through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu.
 
+Glowing Ores is also listed in `incompatibleResourcePacks` so Minecraft accepts it despite its compatibility warning.
+
 Icons - Tooltips 1.3 supports Minecraft 26.2. Icons - Enchantments 1.2 only lists support through 1.21.11; it is included intentionally, but its in-game compatibility with 26.2 is unverified.
 
 | Setting | Default |
