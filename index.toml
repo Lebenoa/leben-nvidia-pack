@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "README.md"
-hash = "73b54d65fce2296a3d0f6dcff512b967055e15974f2dbee2ad59ab6cccc2ace4"
+hash = "d20b7ff1dbfa7873acad38d7960488f1edd949be72ebed19e935175a765d5b2d"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"
@@ -11,7 +11,7 @@ metafile = true
 
 [[files]]
 file = "mods/animaticarefabricated.pw.toml"
-hash = "98f51845428b241d43adfa7da330b1a4b8a842ad708ca4382a3ce3ffc3d6fb23"
+hash = "dfeb3e599b5b54350f4cfe5a2f85ae77cbc52fb083cfcd38b4ed1a6025c8e55d"
 metafile = true
 
 [[files]]
@@ -226,7 +226,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "c970a2e66d4cc4e7a25cf27987a89cc2830af91e98d424d7e55a549dc88f374a"
+hash = "f359ef7b6483f2398608fc893899bf6dc44f2b41a7b67ff408e7605b2d0efdf6"
 
 [[files]]
 file = "resourcepacks/dark-smooth-gui.pw.toml"

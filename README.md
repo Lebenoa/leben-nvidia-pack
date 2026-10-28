@@ -53,6 +53,10 @@ Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, [Icon
 
 Icons - Tooltips 1.3 supports Minecraft 26.2. Icons - Enchantments 1.2 only lists support through 1.21.11; it is included intentionally, but its in-game compatibility with 26.2 is unverified.
 
+Default movement keybinds swap vanilla's sneak and sprint keys: **Left Ctrl** to sneak, **Left Shift** to sprint. Default FOV is **103°** and GUI scale is **2**.
+
+Additional defaults: VSync off, 200 FPS limit, 8-chunk render and simulation distances, mipmap level 2, and fast clouds. Screen effects are off, FOV effects are about 2.29%, mouse sensitivity is 25%, and damage tilt is 50%. Auto-jump and pause on lost focus are off; advanced item tooltips are on. Master volume is about 14.57%; music and ambient sounds are muted. The swap-offhand key is left at Minecraft's default. Bundled resource-pack priority follows the reference instance; its three unbundled helper packs are not enabled.
+
 ## Why?
 
 Honestly? [Fabulously Optimized](https://modrinth.com/modpack/fabulously-optimized) ships mods I never use and is missing ones I always want. So this is my own take — most of the mods I actually play with, minus the stuff I'd just turn off anyway.
