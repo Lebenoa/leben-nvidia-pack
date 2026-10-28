@@ -3,7 +3,7 @@
 # Usage: powershell -ExecutionPolicy Bypass -File install.ps1
 $ErrorActionPreference = "Stop"
 
-$Tag    = "v0.0.1"
+$Tag    = "v0.0.2"
 $Repo   = "Lebenoa/packwiz"
 $Asset  = "packwiz-windows-amd64.exe"
 

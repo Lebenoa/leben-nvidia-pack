@@ -4,7 +4,7 @@
 # Usage: bash install.sh
 set -euo pipefail
 
-TAG="v0.0.1"
+TAG="v0.0.2"
 REPO="Lebenoa/packwiz"
 
 # Pick the right release asset for this platform.

@@ -2,29 +2,30 @@
 
 A client-side Fabric modpack for Minecraft 26.2 with rendering and quality-of-life mods. ***Despite the name, Nvidium is the only NVIDIA-specific mod.***
 
+**NoRisk Client users:** a prebuilt `leben-nvidia-pack.noriskpack` is available on the [Releases page](https://github.com/Lebenoa/leben-nvidia-pack/releases) — download it and import it into NoRisk Client. No jars are bundled; NoRisk fetches every mod itself.
+
 ## Features
 
 - Render with Sodium and Iris Shaders; use Nvidium's alternative renderer on supported NVIDIA GPUs when shaders are inactive.
 - Use client-side interface and quality-of-life mods, including Jade, Mouse Tweaks, and Smooth Scrolling.
-- Export the recorded mod versions to a `.mrpack` for import into a compatible launcher.
+- Export the recorded mod versions to a `.mrpack` or a `.noriskpack` for import into a compatible launcher.
 
 ## Why no `.mrpack`?
 
 InstaPack (and some others) have third-party distribution disabled on CurseForge, so I'm not comfortable shipping a prebuilt `.mrpack` that bundles their jars. The scripts in this repo download everything and build the pack on your machine instead. That's my choice, not a license — the mods still belong to their authors.
 
-Targets Minecraft **26.2** and Fabric **0.20.1** (packwiz format **1.1.0**). Use Java **25 or later**, as required by the selected mods.
-
 ## Installation
 
 Download the repository using **Code → Download ZIP**, or [download the ZIP directly](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip). Extract it before running either installer; Git is not required.
 
-Windows requires PowerShell 5.1 or later; its downloader and ZIP extraction commands are built in. Linux/macOS require bash and curl, plus tar when the script must fetch the pack. Both paths require internet access and a launcher that imports `.mrpack` files.
+- Targets Minecraft **26.2** and Fabric **0.20.1** (packwiz format **1.1.0**); Java **25 or later**, as required by the selected mods.
+- **Windows:** PowerShell 5.1 or later — its downloader and ZIP extraction commands are built in.
+- **Linux / macOS:** bash and curl, plus tar when the script must fetch the pack.
+- Internet access, and a launcher that imports `.mrpack` files.
 
 ## Usage
 
-**Windows:** double-click `install.cmd` in the extracted folder. It runs `install.ps1` and keeps the window open so you can read the result or any errors. No administrator privileges are required.
-
-Alternatively, open PowerShell in the extracted folder and run:
+**Windows:** double-click `install.cmd` in the extracted folder. It runs `install.ps1` and keeps the window open so you can read the result or any errors. No administrator privileges are required. Alternatively, open PowerShell in the extracted folder and run:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
@@ -33,14 +34,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 **Linux / macOS:** open a terminal in the extracted folder and run:
 
 ```bash
-# Linux / macOS
 bash install.sh
 ```
 
-The scripts reuse `packwiz` on PATH, or download fork release **v0.0.1** if none is found, then export `leben-nvidia-pack.mrpack`. The Windows downloader selects the amd64 build; the Unix script selects an asset using the OS and architecture. These scripts export the pack; they do not install a launcher or Minecraft.
+The scripts reuse `packwiz` on PATH, or download fork release **v0.0.2** if none is found (Windows selects the amd64 build; Unix selects by OS and architecture), then export `leben-nvidia-pack.mrpack`. They do not install a launcher or Minecraft.
 
 > [!TIP]
-> **Recommended: use the [fork release](https://github.com/Lebenoa/packwiz/releases).** It can fetch InstaPack automatically. If `packwiz` is already on PATH, the scripts reuse it without verifying that it is the fork; an upstream binary may require a manual download. See [Acknowledgments](#acknowledgments) for the API-key explanation.
+> **Recommended: use the [fork release](https://github.com/Lebenoa/packwiz/releases) (v0.0.2 or later).** It can fetch InstaPack automatically and supports `packwiz norisk export` for NoRisk Client. If `packwiz` is already on PATH, the scripts reuse it without verifying that it is the fork; an upstream binary may require a manual download. See [Acknowledgments](#acknowledgments) for the API-key explanation.
 
 **With upstream packwiz:** if export requests a manual download, obtain [InstaPack 1.0.0 for Fabric 26.2](https://www.curseforge.com/minecraft/mc-mods/instapack/files/9099255) and follow packwiz's prompt before retrying. Do not assume a failed export produced a complete pack.
 
@@ -49,15 +49,43 @@ The scripts reuse `packwiz` on PATH, or download fork release **v0.0.1** if none
 
 After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launcher, such as Prism Launcher or ATLauncher. Launch the imported Minecraft **26.2** / Fabric **0.20.1** instance.
 
-Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, [Icons - Tooltips](https://modrinth.com/resourcepack/icons-tooltips), [Icons - Enchantments](https://modrinth.com/resourcepack/icons-enchantments), ClientSort Dark Mode, Continuity's Default Connected Textures, and Glass Pane Culling Fix are selected by default through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu. Copying this file into an existing instance replaces its saved options; these defaults are intended for a fresh instance.
+### NoRisk Client
+
+Either import the prebuilt pack from the [Releases page](#leben-s-nvidia-pack), or build it yourself: with a `packwiz` build that supports `norisk export` on PATH, run this from the extracted pack folder:
+
+```bash
+packwiz norisk export -o leben-nvidia-pack.noriskpack
+```
+
+Import `leben-nvidia-pack.noriskpack` into NoRisk Client. This export sets the profile icon configured in `pack.toml`. The fork release **v0.0.2+** supports this command; upstream packwiz does not.
+
+## Defaults
+
+Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, [Icons - Tooltips](https://modrinth.com/resourcepack/icons-tooltips), [Icons - Enchantments](https://modrinth.com/resourcepack/icons-enchantments), ClientSort Dark Mode, Continuity's Default Connected Textures, and Glass Pane Culling Fix are enabled through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu.
 
 Icons - Tooltips 1.3 supports Minecraft 26.2. Icons - Enchantments 1.2 only lists support through 1.21.11; it is included intentionally, but its in-game compatibility with 26.2 is unverified.
 
-Default movement keybinds swap vanilla's sneak and sprint keys: **Left Ctrl** to sneak, **Left Shift** to sprint. Default FOV is **103°** and GUI scale is **2**.
+| Setting | Default |
+|---|---|
+| Sneak / Sprint | **Left Ctrl** / **Left Shift** (swapped from vanilla) |
+| FOV | 103° |
+| FOV effects | ~2.29% |
+| GUI scale | 2 |
+| VSync / FPS limit | Off / 200 |
+| Render / simulation distance | 8 / 8 chunks |
+| Mipmap level / clouds | 2 / fast |
+| Screen effects | Off |
+| Mouse sensitivity / damage tilt | 25% / 50% |
+| Auto-jump / pause on lost focus | Off |
+| Advanced item tooltips | On |
+| Master volume | ~14.57% |
+| Music / ambient volume | Muted |
+| Swap offhand key | Vanilla default |
+| Iris max shadow render distance | 6 |
 
-Additional defaults: VSync off, 200 FPS limit, 8-chunk render and simulation distances, mipmap level 2, and fast clouds. Screen effects are off, FOV effects are about 2.29%, mouse sensitivity is 25%, and damage tilt is 50%. Auto-jump and pause on lost focus are off; advanced item tooltips are on. Master volume is about 14.57%; music and ambient sounds are muted. The swap-offhand key is left at Minecraft's default. Bundled resource-pack priority follows the reference instance; its three unbundled helper packs are not enabled.
+The pack also ships configs for Dynamic FPS, More Culling, Smooth Swapping, Sodium Shadowy Path Blocks, ClientSort, Show Me Your Skin!, Mod Menu, and No Chat Reports.
 
-The pack also includes configs for Dynamic FPS, More Culling, Smooth Swapping, Sodium Shadowy Path Blocks, ClientSort, Show Me Your Skin!, Mod Menu, and No Chat Reports. Iris's maximum shadow render distance is set to 6; other Iris settings are left at their defaults. Importing these files into an existing instance can replace that instance's mod settings.
+Importing `options.txt` or these configs into an existing instance replaces that instance's saved settings; these defaults are intended for a fresh instance.
 
 ## Why?
 
@@ -120,9 +148,9 @@ All 44 mods, grouped by purpose. The Side column reproduces this pack's metadata
 
 ## Acknowledgments
 
-This pack is maintained with a personal fork of the packwiz CLI: [Lebenoa/packwiz](https://github.com/Lebenoa/packwiz), forked from [packwiz/packwiz](https://github.com/packwiz/packwiz).
+This pack is maintained with a personal fork of the packwiz CLI: [Lebenoa/packwiz](https://github.com/Lebenoa/packwiz), forked from [packwiz/packwiz](https://github.com/packwiz/packwiz). As of v0.0.2, the fork also adds a `norisk` command for exporting NoRisk Client packs.
 
-The fork's single change vs upstream is shipping the trusted [MultiMC/PolyMC/Prism CurseForge API key](https://github.com/enjarai/the-curseforge-api-key). CurseForge only returns `downloadUrl` for projects with third-party distribution disabled (like InstaPack) when the request uses a key it trusts; with an untrusted key the file comes back without a URL and export fails. Upstream removed this key, so its exports degrade that mod to a manual download — the fork resolves and bundles it automatically ([release binaries](https://github.com/Lebenoa/packwiz/releases) for Windows/macOS/Linux).
+The fork ships the trusted [MultiMC/PolyMC/Prism CurseForge API key](https://github.com/enjarai/the-curseforge-api-key) and, since v0.0.2, the `norisk` export command. CurseForge only returns `downloadUrl` for projects with third-party distribution disabled (like InstaPack) when the request uses a key it trusts; with an untrusted key the file comes back without a URL and export fails. Upstream removed this key, so its exports degrade that mod to a manual download — the fork resolves and bundles it automatically ([release binaries](https://github.com/Lebenoa/packwiz/releases) for Windows/macOS/Linux).
 
 ## License
 

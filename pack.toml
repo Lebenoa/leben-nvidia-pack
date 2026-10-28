@@ -6,8 +6,12 @@ pack-format = "packwiz:1.1.0"
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "b2bfb1e8cb4aae009eb4931220633f5a65359f49818844670e73780a42126cc1"
+hash = "2bebc17834bd2f887bd368467c12c3f15cbdce210dbf63cc63e50ac233504cd1"
 
 [versions]
 fabric = "0.20.1"
 minecraft = "26.2"
+
+[export]
+[export.norisk]
+icon = "https://cdn.discordapp.com/avatars/572446728759017472/2f8ca3270a849789da4c23e453209fcc.png?size=2048"
