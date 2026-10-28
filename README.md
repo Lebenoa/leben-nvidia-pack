@@ -21,7 +21,7 @@ My [packwiz fork](https://github.com/Lebenoa/packwiz/releases) supports `packwiz
 
 ## Installation
 
-### NoRisk Client
+### NoRisk Client (verified)
 
 Download `leben-nvidia-pack.noriskpack` from the [v0.2.0 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.0) and import it into NoRisk Client. This release predates ExploitPreventer; build from this branch to include the current mod list.
 
@@ -33,7 +33,7 @@ packwiz norisk export -o leben-nvidia-pack.noriskpack
 
 Import the resulting file into NoRisk Client. The export sets the profile icon configured in `pack.toml`; fork release **v0.0.2+** supports this command, but upstream packwiz does not.
 
-### Prism Launcher and other `.mrpack` launchers
+### Prism Launcher (verified) and other `.mrpack` launchers
 
 Download `leben-nvidia-26.2.mrpack` from the [v0.2.1 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.1) and import it into Prism Launcher or another launcher that accepts CurseForge download URLs. The v0.3.0 `.mrpack` is for 26.3.
 
