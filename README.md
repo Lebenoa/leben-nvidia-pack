@@ -93,7 +93,7 @@ Honestly? [Fabulously Optimized](https://modrinth.com/modpack/fabulously-optimiz
 
 ## Mods
 
-All 44 mods, grouped by purpose. The Side column reproduces this pack's metadata (`client` or `both`); it is not a guarantee of server compatibility.
+All 45 mods, grouped by purpose. The Side column reproduces this pack's metadata (`client` or `both`); it is not a guarantee of server compatibility.
 
 | Mod | Side | What it does |
 |---|---|---|
@@ -136,6 +136,7 @@ All 44 mods, grouped by purpose. The Side column reproduces this pack's metadata
 | [Reese's Sodium Options](https://modrinth.com/mod/Bh37bMuy) | client | Reorganized, searchable Sodium video settings screen. |
 | [Sodium Extra](https://modrinth.com/mod/PtjYWJkn) | client | Extra graphics toggles Sodium lacks (fog, animations, particles). |
 | [No Chat Reports](https://modrinth.com/mod/qQyHxfxd) | both | Removes chat signatures where possible; client-side protection depends on server policy. |
+| [ExploitPreventer](https://modrinth.com/mod/VdINCTcD) | client | Blocks known client-side exploits. |
 | [Remove Reloading Screen](https://modrinth.com/mod/ZP7xHXtw) | client | Keeps the game accessible during resource reloads, retaining a progress bar. |
 | **Libraries & dependencies** | | |
 | [Fabric API](https://modrinth.com/mod/P7dR8mSH) | both | Core APIs most Fabric mods depend on. |
