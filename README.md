@@ -5,7 +5,7 @@ A client-side Fabric modpack for Minecraft 26.2 with rendering and quality-of-li
 > [!NOTE]
 > `master` stays on Minecraft 26.2 to retain Nvidium and the other mods removed for compatibility with 26.3. For the newer pack, see the [26.3 branch](https://github.com/Lebenoa/leben-nvidia-pack/tree/26.3) and its README.
 
-The [v0.2.0 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.0) provides a prebuilt 26.2 NoRisk pack. The newer v0.3.0 release targets 26.3.
+Prebuilt 26.2 packs are available for [Prism Launcher](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.1) and [NoRisk Client](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.0). The newer v0.3.0 release targets 26.3.
 
 ## Features
 
@@ -17,7 +17,7 @@ The [v0.2.0 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v
 
 InstaPack has third-party distribution disabled on CurseForge, so I'm not comfortable shipping a prebuilt `.mrpack` that bundles its jar. That's my choice, not a license — the mods still belong to their authors. The installer scripts build the standard `.mrpack` on your machine instead.
 
-My [packwiz fork](https://github.com/Lebenoa/packwiz/releases) also supports `packwiz modrinth export --no-bundle`, which references InstaPack by its CurseForge download URL instead of bundling its jar. Modrinth rejects CurseForge CDN URLs, launcher support varies, and launchers may show a provenance warning. The published `.mrpack` in v0.3.0 is for 26.3, not this branch.
+My [packwiz fork](https://github.com/Lebenoa/packwiz/releases) supports `packwiz modrinth export --no-bundle`, which the prebuilt `.mrpack` uses to reference InstaPack by its CurseForge download URL instead of bundling its jar. Modrinth rejects CurseForge CDN URLs, launcher support varies, and launchers may show a provenance warning.
 
 ## Installation
 
@@ -35,7 +35,9 @@ Import the resulting file into NoRisk Client. The export sets the profile icon c
 
 ### Prism Launcher and other `.mrpack` launchers
 
-Build the 26.2 `.mrpack` locally; the prebuilt v0.3.0 `.mrpack` is for 26.3. Download the repository using **Code → Download ZIP**, or [download the master ZIP directly](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip). Extract it before running either installer; Git is not required.
+Download `leben-nvidia-26.2.mrpack` from the [v0.2.1 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.1) and import it into Prism Launcher or another launcher that accepts CurseForge download URLs. The v0.3.0 `.mrpack` is for 26.3.
+
+To build the standard `.mrpack` locally instead, download the repository using **Code → Download ZIP**, or [download the master ZIP directly](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip). Extract it before running either installer; Git is not required.
 
 - Targets Minecraft **26.2** and Fabric **0.20.1** (packwiz format **1.1.0**); Java **25 or later**, as required by the selected mods.
 - **Windows:** PowerShell 5.1 or later — its downloader and ZIP extraction commands are built in.
