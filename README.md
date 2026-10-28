@@ -5,7 +5,7 @@ A client-side Fabric modpack for Minecraft 26.2 with rendering and quality-of-li
 > [!NOTE]
 > `master` stays on Minecraft 26.2 to retain Nvidium and the other mods removed for compatibility with 26.3. For the newer pack, see the [26.3 branch](https://github.com/Lebenoa/leben-nvidia-pack/tree/26.3) and its README.
 
-**NoRisk Client users:** a prebuilt `leben-nvidia-pack.noriskpack` is available on the [Releases page](https://github.com/Lebenoa/leben-nvidia-pack/releases) — download it and import it into NoRisk Client. No jars are bundled; NoRisk fetches every mod itself.
+The [v0.2.0 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.0) provides a prebuilt 26.2 NoRisk pack. The newer v0.3.0 release targets 26.3.
 
 ## Features
 
@@ -13,20 +13,34 @@ A client-side Fabric modpack for Minecraft 26.2 with rendering and quality-of-li
 - Use client-side interface and quality-of-life mods, including Jade, Mouse Tweaks, and Smooth Scrolling.
 - Export the recorded mod versions to a `.mrpack` or a `.noriskpack` for import into a compatible launcher.
 
-## Why no `.mrpack`?
+## `.mrpack` distribution
 
-InstaPack (and some others) have third-party distribution disabled on CurseForge, so I'm not comfortable shipping a prebuilt `.mrpack` that bundles their jars. The scripts in this repo download everything and build the pack on your machine instead. That's my choice, not a license — the mods still belong to their authors.
+InstaPack has third-party distribution disabled on CurseForge, so I'm not comfortable shipping a prebuilt `.mrpack` that bundles its jar. That's my choice, not a license — the mods still belong to their authors. The installer scripts build the standard `.mrpack` on your machine instead.
+
+My [packwiz fork](https://github.com/Lebenoa/packwiz/releases) also supports `packwiz modrinth export --no-bundle`, which references InstaPack by its CurseForge download URL instead of bundling its jar. Modrinth rejects CurseForge CDN URLs, launcher support varies, and launchers may show a provenance warning. The published `.mrpack` in v0.3.0 is for 26.3, not this branch.
 
 ## Installation
 
-Download the repository using **Code → Download ZIP**, or [download the ZIP directly](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip). Extract it before running either installer; Git is not required.
+### NoRisk Client
+
+Download `leben-nvidia-pack.noriskpack` from the [v0.2.0 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.0) and import it into NoRisk Client. This release predates ExploitPreventer; build from this branch to include the current mod list.
+
+To build a NoRisk pack yourself, download and extract the [master ZIP](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip), then run this from the extracted folder with a [packwiz fork](https://github.com/Lebenoa/packwiz/releases) that supports `norisk export` on PATH:
+
+```bash
+packwiz norisk export -o leben-nvidia-pack.noriskpack
+```
+
+Import the resulting file into NoRisk Client. The export sets the profile icon configured in `pack.toml`; fork release **v0.0.2+** supports this command, but upstream packwiz does not.
+
+### Prism Launcher and other `.mrpack` launchers
+
+Build the 26.2 `.mrpack` locally; the prebuilt v0.3.0 `.mrpack` is for 26.3. Download the repository using **Code → Download ZIP**, or [download the master ZIP directly](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip). Extract it before running either installer; Git is not required.
 
 - Targets Minecraft **26.2** and Fabric **0.20.1** (packwiz format **1.1.0**); Java **25 or later**, as required by the selected mods.
 - **Windows:** PowerShell 5.1 or later — its downloader and ZIP extraction commands are built in.
 - **Linux / macOS:** bash and curl, plus tar when the script must fetch the pack.
 - Internet access, and a launcher that imports `.mrpack` files.
-
-## Usage
 
 **Windows:** double-click `install.cmd` in the extracted folder. It runs `install.ps1` and keeps the window open so you can read the result or any errors. No administrator privileges are required. Alternatively, open PowerShell in the extracted folder and run:
 
@@ -52,15 +66,6 @@ The scripts reuse `packwiz` on PATH, or download fork release **v0.0.2** if none
 
 After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launcher, such as Prism Launcher or ATLauncher. Launch the imported Minecraft **26.2** / Fabric **0.20.1** instance.
 
-### NoRisk Client
-
-Either import the prebuilt pack from the [Releases page](#leben-s-nvidia-pack), or build it yourself: with a `packwiz` build that supports `norisk export` on PATH, run this from the extracted pack folder:
-
-```bash
-packwiz norisk export -o leben-nvidia-pack.noriskpack
-```
-
-Import `leben-nvidia-pack.noriskpack` into NoRisk Client. This export sets the profile icon configured in `pack.toml`. The fork release **v0.0.2+** supports this command; upstream packwiz does not.
 
 ## Defaults
 
