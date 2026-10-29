@@ -5,7 +5,7 @@ A client-side Fabric modpack for Minecraft 26.2 with rendering and quality-of-li
 > [!NOTE]
 > `master` stays on Minecraft 26.2 to retain Nvidium and the other mods removed for compatibility with 26.3. For the newer pack, see the [26.3 branch](https://github.com/Lebenoa/leben-nvidia-pack/tree/26.3) and its README.
 
-Prebuilt 26.2 packs are available for [Prism Launcher](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.2) and [NoRisk Client](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.2). The newer v0.3.0 release targets 26.3.
+Prebuilt 26.2 packs are available for [Prism Launcher](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/26.2.1) and [NoRisk Client](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/26.2.1). The newer v0.3.0 release targets 26.3.
 
 ## Features
 
@@ -23,7 +23,7 @@ My [packwiz fork](https://github.com/Lebenoa/packwiz/releases) supports `packwiz
 
 ### NoRisk Client (verified)
 
-Download `leben-nvidia-pack.noriskpack` from the [v0.2.2 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.2) and import it into NoRisk Client.
+Download `leben-nvidia-pack.noriskpack` from the [26.2.1 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/26.2.1) and import it into NoRisk Client.
 
 To build a NoRisk pack yourself, download and extract the [master ZIP](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip), then run this from the extracted folder with a [packwiz fork](https://github.com/Lebenoa/packwiz/releases) that supports `norisk export` on PATH:
 
@@ -35,7 +35,7 @@ Import the resulting file into NoRisk Client. The export sets the profile icon c
 
 ### Prism Launcher (verified) and other `.mrpack` launchers
 
-Download `leben-nvidia-26.2.mrpack` from the [v0.2.2 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/v0.2.2) and import it into Prism Launcher or another launcher that accepts CurseForge download URLs. The v0.3.0 `.mrpack` is for 26.3.
+Download `leben-nvidia-26.2.mrpack` from the [26.2.1 release](https://github.com/Lebenoa/leben-nvidia-pack/releases/tag/26.2.1) and import it into Prism Launcher or another launcher that accepts CurseForge download URLs. The v0.3.0 `.mrpack` is for 26.3.
 
 To build the standard `.mrpack` locally instead, download the repository using **Code → Download ZIP**, or [download the master ZIP directly](https://github.com/Lebenoa/leben-nvidia-pack/archive/refs/heads/master.zip). Extract it before running either installer; Git is not required.
 
