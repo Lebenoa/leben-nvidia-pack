@@ -267,11 +267,11 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "9d1bb16536bf3543bece56ea7de2cf2bb8021edfc15fefd614d6505e6a75e47b"
+hash = "13c5c97deafefe048257a644d02bf89f5679e87279359cfc89d71e136e8a69c4"
 
 [[files]]
-file = "resourcepacks/Roman-Arabic Enchantment Levels.zip"
-hash = "2cd9da466f5648027966639e1d85f01137b8b424fdeb616b5839480401f3178f"
+file = "resourcepacks/EnchantEnhanced.zip"
+hash = "7979c29c4b784e11d17af8194e8b5192ba7749b1662f355674155a9b714af9ed"
 
 [[files]]
 file = "resourcepacks/dark-smooth-gui.pw.toml"

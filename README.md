@@ -71,7 +71,7 @@ After export succeeds, import `leben-nvidia-pack.mrpack` into a compatible launc
 
 ## Defaults
 
-Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, [Icons - Tooltips](https://modrinth.com/resourcepack/icons-tooltips), [Icons - Enchantments](https://modrinth.com/resourcepack/icons-enchantments), ClientSort Dark Mode, Continuity's Default Connected Textures, Glass Pane Culling Fix, and Roman–Arabic Enchantment Levels (enchantment levels shown as Roman numerals up to 25, Arabic numerals from 26 to 255) are enabled through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu.
+Dark Smooth GUI, Glowing Ores – Borderful Edition, Even Better Enchants, [Icons - Tooltips](https://modrinth.com/resourcepack/icons-tooltips), [Icons - Enchantments](https://modrinth.com/resourcepack/icons-enchantments), ClientSort Dark Mode, Continuity's Default Connected Textures, Glass Pane Culling Fix, and [EnchantEnhanced](https://github.com/Lebenoa/EnchantEnhanced) (enchant icons plus levels shown as Roman numerals II-XXV up to 25, Arabic from 26 to 255) are enabled through the included `options.txt`. You can turn them off in Minecraft's Resource Packs menu.
 
 Icons - Tooltips 1.3 supports Minecraft 26.2. Icons - Enchantments 1.2 only lists support through 1.21.11; it is included intentionally, but its in-game compatibility with 26.2 is unverified.
 
