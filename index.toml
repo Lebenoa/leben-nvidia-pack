@@ -267,7 +267,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "13c5c97deafefe048257a644d02bf89f5679e87279359cfc89d71e136e8a69c4"
+hash = "cf4db854476f14bd3961b3805396492eb60cd715f131d0d3471a7989e555d842"
 
 [[files]]
 file = "resourcepacks/EnchantEnhanced.zip"
@@ -286,11 +286,6 @@ metafile = true
 [[files]]
 file = "resourcepacks/glowing-ores.pw.toml"
 hash = "7e5a369aa5f9094e8e7faaadf55a08427e1d29636d481eadcbd6f2abd5a67c68"
-metafile = true
-
-[[files]]
-file = "resourcepacks/icons-enchantments.pw.toml"
-hash = "fe8efdda1dfb3e1e8179ac495f636d551fd96b70fcce847fe9c1a9f0f4b1e123"
 metafile = true
 
 [[files]]

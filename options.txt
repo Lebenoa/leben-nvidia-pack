@@ -1,6 +1,6 @@
 version:4903
 graphicsPreset:"custom"
-resourcePacks:["vanilla","continuity:glass_pane_culling_fix","continuity:default","clientsort:clientsort-dark-mode","file/Dark Smooth GUI 26.2.x.zip","file/Icons - Tooltips v.1.3.zip","file/Glowing Ores - Borderful Edition (8.0.1v).zip","file/EvenBetterEnchants_v3_1.21.5+.zip","file/Icons - Enchantments v.1.2.zip","file/EnchantEnhanced.zip"]
+resourcePacks:["vanilla","continuity:glass_pane_culling_fix","continuity:default","clientsort:clientsort-dark-mode","file/Dark Smooth GUI 26.2.x.zip","file/Icons - Tooltips v.1.3.zip","file/Glowing Ores - Borderful Edition (8.0.1v).zip","file/EvenBetterEnchants_v3_1.21.5+.zip","file/EnchantEnhanced.zip"]
 key_key.sneak:key.keyboard.left.control
 key_key.sprint:key.keyboard.left.shift
 fov:0.825
