@@ -9,6 +9,10 @@ file = "config/NoChatReports/NCR-Common.json"
 hash = "77777d6d4901caa3b49847bde37722ee3cf81d745cfc2e8ffdd2aca6211418e8"
 
 [[files]]
+file = "config/chatpatches.json"
+hash = "d00c96d4d40746ce0d2b4a60ddda3d64b0d8309253075beebc645f14ffcfa07d"
+
+[[files]]
 file = "config/clientsort.json"
 hash = "773d8d196608d82f656e0e31239d9d07051098f05b1a54e7dc172ab75fa25253"
 
@@ -67,7 +71,7 @@ metafile = true
 
 [[files]]
 file = "mods/chatpatches.pw.toml"
-hash = "0295d0c9eba31304a3a33f5673d0b815d97938bf5ceee3a2c9bf34d983777fac"
+hash = "f9527c83577d3cc0de193196ef7f5a9c829b8ad8d6d9eb11e3c50c5a90249953"
 metafile = true
 
 [[files]]
@@ -157,7 +161,7 @@ metafile = true
 
 [[files]]
 file = "mods/ixeris.pw.toml"
-hash = "c337944fa6bd4ea4b727363b3d8476893174b802143cd0575ff7fff5d1105365"
+hash = "ad71feb6859b930ab26df35d4483863fe04b896b5aad831225a1faa389899dc0"
 metafile = true
 
 [[files]]
