@@ -13,6 +13,10 @@ file = "config/NoChatReports/NCR-Common.json"
 hash = "77777d6d4901caa3b49847bde37722ee3cf81d745cfc2e8ffdd2aca6211418e8"
 
 [[files]]
+file = "config/chatpatches.json"
+hash = "d00c96d4d40746ce0d2b4a60ddda3d64b0d8309253075beebc645f14ffcfa07d"
+
+[[files]]
 file = "config/clientsort.json"
 hash = "773d8d196608d82f656e0e31239d9d07051098f05b1a54e7dc172ab75fa25253"
 
