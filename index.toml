@@ -66,11 +66,6 @@ hash = "20b6f1ede3e7480f454751e7730a2c58ff82b2f6fa8bb60fce972cbf916161e1"
 metafile = true
 
 [[files]]
-file = "mods/chatpatches.pw.toml"
-hash = "0295d0c9eba31304a3a33f5673d0b815d97938bf5ceee3a2c9bf34d983777fac"
-metafile = true
-
-[[files]]
 file = "mods/chest-search-bar.pw.toml"
 hash = "3364cf52c2370188a99989abda397157d2cfd709a0a6fe5b94468ceac925dfe9"
 metafile = true
